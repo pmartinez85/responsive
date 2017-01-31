@@ -11,14 +11,15 @@
       </div>
       <div class="text">
         <div class="precipitation">Precipitation: {{precipitation}}</div>
-        <div class="humidity">humidity: {{humidity}}</div>
-        <div class="wind">wind: {{wind}}</div>
-        <div class="pollen">pollen: {{pollen}}</div>
+        <div class="humidity">Humidity: {{humidity}}</div>
+        <div class="wind">Wind: {{wind}}</div>
+        <div class="pollen">Pollen: {{pollen}}</div>
       </div>
     </div>
     <div class="forecast">
     <div class="forecast-day" v-for="forecast in forecasts">
       <div class="date">{{forecast.date}}</div>
+      <div></div>
       <div class="icon">{{forecast.icon}}</div>
       <div class="lowtemp">{{forecast.lowtemp}}</div>
       <div class="hightemp">{{forecast.hightemp}}</div>
@@ -41,13 +42,13 @@ export default {
       wind: '4mph SW',
       pollen: 36,
       forecasts: [
-        {'date': 'Monday', 'icon': 'cloud', 'lowtemp': 14, 'hightemp': 23},
-        {'date': 'Tuesday', 'icon': 'sun', 'lowtemp': 12, 'hightemp': 21},
-        {'date': 'Wednesday', 'icon': 'sun-cloud', 'lowtemp': 15, 'hightemp': 24},
-        {'date': 'Thursday', 'icon': 'cloud', 'lowtemp': 11, 'hightemp': 24},
-        {'date': 'Friday', 'icon': 'raining', 'lowtemp': 12, 'hightemp': 27},
-        {'date': 'Saturday', 'icon': 'cloud', 'lowtemp': 14, 'hightemp': 26},
-        {'date': 'Sunday', 'icon': 'sun', 'lowtemp': 16, 'hightemp': 23}
+        {'date': 'Monday', 'icon': 'cloudy', 'lowtemp': 14, 'hightemp': 23},
+        {'date': 'Tuesday', 'icon': 'sunny', 'lowtemp': 12, 'hightemp': 21},
+        {'date': 'Wednesday', 'icon': 'suncloud', 'lowtemp': 15, 'hightemp': 24},
+        {'date': 'Thursday', 'icon': 'cloudy', 'lowtemp': 11, 'hightemp': 24},
+        {'date': 'Friday', 'icon': 'rainy', 'lowtemp': 12, 'hightemp': 27},
+        {'date': 'Saturday', 'icon': 'cloudy', 'lowtemp': 14, 'hightemp': 26},
+        {'date': 'Sunday', 'icon': 'sunny', 'lowtemp': 16, 'hightemp': 23}
       ]
     }
   }
@@ -90,10 +91,12 @@ export default {
   .icon {
     background-repeat: no-repeat;
     background-size: contain;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .icon.cloudy {
-  background-image: url('../assets/logo.png');
+  .icon.cloudy .icon {
+  background-image: url('../assets/cloudy.png');
   font-size: 2em;
 
   }
