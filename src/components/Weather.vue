@@ -5,7 +5,7 @@
     <div class="description">{{description}}</div>
     <div class="current">
       <div class="visual">
-        <div class="cloud"></div>
+        <div class="cloud">Cloud</div>
           <div class="temp">{{temp}}</div>
         <div class="scale">º</div>
       </div>
@@ -20,8 +20,8 @@
     <div class="forecast-day" v-for="forecast in forecasts">
       <div class="date">{{forecast.date}}</div>
       <div class="icon">{{forecast.icon}}</div>
-      <div class="low-temp">{{forecast.low-temp}}</div>
-      <div class="high-temp">{{forecast.high-temp}}</div>
+      <div class="lowtemp">{{forecast.lowtemp}}</div>
+      <div class="hightemp">{{forecast.hightemp}}</div>
 
     </div>
     </div>
@@ -41,13 +41,13 @@ export default {
       wind: '4mph SW',
       pollen: 36,
       forecasts: [
-        {'date': 'Monday', 'icon': 'cloud', 'low-temp': 14, 'high-temp': 23},
-        {'date': 'Tuesday', 'icon': 'sun', 'low-temp': 12, 'high-temp': 21},
-        {'date': 'Wednesday', 'icon': 'sun-cloud', 'low-temp': 15, 'high-temp': 24},
-        {'date': 'Thursday', 'icon': 'cloud', 'low-temp': 11, 'high-temp': 24},
-        {'date': 'Friday', 'icon': 'raining', 'low-temp': 12, 'high-temp': 27},
-        {'date': 'Saturday', 'icon': 'cloud', 'low-temp': 14, 'high-temp': 26},
-        {'date': 'Sunday', 'icon': 'sun', 'low-temp': 16, 'high-temp': 23}
+        {'date': 'Monday', 'icon': 'cloud', 'lowtemp': 14, 'hightemp': 23},
+        {'date': 'Tuesday', 'icon': 'sun', 'lowtemp': 12, 'hightemp': 21},
+        {'date': 'Wednesday', 'icon': 'sun-cloud', 'lowtemp': 15, 'hightemp': 24},
+        {'date': 'Thursday', 'icon': 'cloud', 'lowtemp': 11, 'hightemp': 24},
+        {'date': 'Friday', 'icon': 'raining', 'lowtemp': 12, 'hightemp': 27},
+        {'date': 'Saturday', 'icon': 'cloud', 'lowtemp': 14, 'hightemp': 26},
+        {'date': 'Sunday', 'icon': 'sun', 'lowtemp': 16, 'hightemp': 23}
       ]
     }
   }
@@ -75,7 +75,7 @@ export default {
   }
   .visual {
     float: left;
-    width: 40%;
+    width: 50%;
   }
   .text {
     width: 50%;
@@ -83,7 +83,18 @@ export default {
 
   }
 
-  .forecast-dat {
+  .forecast-day {
     display: inline-block;
+    width: 14.285%,
+  }
+  .icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .icon.cloudy {
+  background-image: url('../assets/logo.png');
+  font-size: 2em;
+
   }
 </style>

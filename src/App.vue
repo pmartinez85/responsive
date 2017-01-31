@@ -2,6 +2,7 @@
   <div id="app">
 
     <weather></weather>
+
   </div>
 </template>
 
@@ -19,8 +20,10 @@ export default {
 <style>
 
 * {
- -moz-box-sizzing:
-}
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #999;
+ }
   body {
   font-family: Roboto, Arial;
   font-size: 1.2em;
