@@ -36,17 +36,18 @@ export default {
       date: 'Tuesday, April 15th',
       description: ' Description  here',
       temp: 25,
+      precipitation: '100%',
       humidity: 97,
       wind: '4mph SW',
       pollen: 36,
       forecasts: [
-        {'date': 'Monday', 'icon': 'cloud', 'low-temp': '28', 'high-temp': '45'},
-        {'date': 'Tuesday', 'icon': 'sun', 'low-temp': '28', 'high-temp': '45'},
-        {'date': 'Wednesday', 'icon': 'sun-cloud', 'low-temp': '28', 'high-temp': '45'},
-        {'date': 'Thursday', 'icon': 'cloud', 'low-temp': '28', 'high-temp': '45'},
-        {'date': 'Friday', 'icon': 'raining', 'low-temp': '28', 'high-temp': '45'},
-        {'date': 'Saturday', 'icon': 'cloud', 'low-temp': '28', 'high-temp': '45'},
-        {'date': 'Sunday', 'icon': 'sun', 'low-temp': '28', 'high-temp': '45'}
+        {'date': 'Monday', 'icon': 'cloud', 'low-temp': 14, 'high-temp': 23},
+        {'date': 'Tuesday', 'icon': 'sun', 'low-temp': 12, 'high-temp': 21},
+        {'date': 'Wednesday', 'icon': 'sun-cloud', 'low-temp': 15, 'high-temp': 24},
+        {'date': 'Thursday', 'icon': 'cloud', 'low-temp': 11, 'high-temp': 24},
+        {'date': 'Friday', 'icon': 'raining', 'low-temp': 12, 'high-temp': 27},
+        {'date': 'Saturday', 'icon': 'cloud', 'low-temp': 14, 'high-temp': 26},
+        {'date': 'Sunday', 'icon': 'sun', 'low-temp': 16, 'high-temp': 23}
       ]
     }
   }
