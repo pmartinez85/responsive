@@ -41,25 +41,40 @@ export default {
       humidity: 97,
       wind: '4mph SW',
       pollen: 36,
-      forecasts: [
-        {'date': 'Monday', 'icon': 'cloudy', 'lowtemp': 14, 'hightemp': 23},
-        {'date': 'Tuesday', 'icon': 'sunny', 'lowtemp': 12, 'hightemp': 21},
-        {'date': 'Wednesday', 'icon': 'suncloud', 'lowtemp': 15, 'hightemp': 24},
-        {'date': 'Thursday', 'icon': 'cloudy', 'lowtemp': 11, 'hightemp': 24},
-        {'date': 'Friday', 'icon': 'rainy', 'lowtemp': 12, 'hightemp': 27},
-        {'date': 'Saturday', 'icon': 'cloudy', 'lowtemp': 14, 'hightemp': 26},
-        {'date': 'Sunday', 'icon': 'sunny', 'lowtemp': 16, 'hightemp': 23}
-      ]
+      forecasts: []
     }
+  },
+  methods: {
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
   .weather {
+    width: 100%;
     padding:20px;
+    box-shadow: 0 10px 40px  rga(0,0,0,0,2);
   }
+
+  @media (min-width: 700px) {
+    .weather {
+      width: 700px;
+    }
+
+  }
+
+  @media (min-width: 650px) {
+    .location {
+      font-size: 5am;
+    }
+
+    @media (max-width : 650px)
+
+
+  }
+
   .location {
     font-size: 3em;
   }
@@ -84,11 +99,16 @@ export default {
 
   }
 
+   .forecast-day {
+    display: inline-block;
+    width: 14.285%;
+  }
+
   .forecast-day {
     display: inline-block;
-    width: 14.285%,
+    width: 14.285%;
   }
-  .icon {
+   .icon {
     background-repeat: no-repeat;
     background-size: contain;
     margin-left: auto;
